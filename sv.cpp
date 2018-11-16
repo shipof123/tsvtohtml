@@ -50,7 +50,7 @@ void SV::format()
   {
     header += "<td>&nbsp;&nbsp;&nbsp;&nbsp;<b> " + element + "</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>"; 
   }
-  std::ofstream out(dest.c_str(), std::ios::app);
+  std::sstream out(dest, std::ios::app);
   out << std::endl 
     << "<pre style=\"background-color:rgb(25, 4, 44)\">\n"
     << std::endl 
