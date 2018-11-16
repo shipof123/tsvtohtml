@@ -21,6 +21,7 @@ public:
   }
   void read();
   void print();
+  void write_to_html();
   void sort(std::string content);
   void format();
 };
