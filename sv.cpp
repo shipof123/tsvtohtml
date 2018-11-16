@@ -4,9 +4,9 @@
 #include <iostream>
 #include <fstream>
 
-#include "tsv.h"
+#include "sv.h"
 
-void TSV::sort(std::string content)
+void SV::sort(std::string content)
 {
     std::istringstream f(content);
     std::string line;
@@ -16,7 +16,7 @@ void TSV::sort(std::string content)
         std::istringstream rec(line);
         std::vector<std::string> record;
         std::string entry;
-        while(getline(rec,entry,'\t'))
+        while(getline(rec,entry,delim))
         {
           record.push_back(entry);  
         }
@@ -24,7 +24,7 @@ void TSV::sort(std::string content)
     }
 }
 
-void TSV::read()
+void SV::read()
 {
   std::ifstream ifs(file.c_str());
   getline(ifs,first);
@@ -32,7 +32,7 @@ void TSV::read()
                        (std::istreambuf_iterator<char>()    ) );
   sort(content);
 }
-void TSV::print()
+void SV::print()
 {
     for(auto e : records)
     {
@@ -41,7 +41,7 @@ void TSV::print()
       std::cout << std::endl;
     }
 }
-void TSV::format()
+void SV::format()
 {
   std::string header;
   std::string element;
