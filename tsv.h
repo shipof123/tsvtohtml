@@ -4,7 +4,7 @@
 #define TSV_H_
 
 template <char _delim>
-class TSV
+class SV
 {
 private:
   char delim = _delim;
@@ -14,7 +14,7 @@ private:
   std::string file;
   std::string dest;
 public:
-  TSV(std::string fname, std::string dst)
+  SV(std::string fname, std::string dst)
   {
     file = fname;
     dest = dst;
