@@ -18,9 +18,6 @@ public:
   {
     file = fname;
     dest = dst;
-    read();
-    print();
-    format();
   }
   void read();
   void print();
