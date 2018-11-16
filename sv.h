@@ -14,10 +14,9 @@ private:
   std::string file;
   std::string dest;
 public:
-  SV(std::string fname, std::string dst)
+  SV(const std::string& fname)
   {
     file = fname;
-    dest = dst;
   }
   void read();
   void print();
